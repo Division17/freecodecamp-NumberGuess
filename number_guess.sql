@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
--- Dumped by pg_dump version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
+-- Dumped from database version 12.9 (Ubuntu 12.9-2.pgdg20.04+1)
+-- Dumped by pg_dump version 12.9 (Ubuntu 12.9-2.pgdg20.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,59 +44,32 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: details; Type: TABLE; Schema: public; Owner: freecodecamp
+-- Name: games; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
-CREATE TABLE public.details (
-    username character varying(20) NOT NULL,
+CREATE TABLE public.games (
+    username character varying(22),
     games_played integer,
     best_game integer
 );
 
 
-ALTER TABLE public.details OWNER TO freecodecamp;
+ALTER TABLE public.games OWNER TO freecodecamp;
 
 --
--- Data for Name: details; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+-- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.details VALUES ('user_1730517517706', 0, 0);
-INSERT INTO public.details VALUES ('user_1730517517705', 0, 0);
-INSERT INTO public.details VALUES ('user_1730517801146', 0, 0);
-INSERT INTO public.details VALUES ('user_1730517801145', 0, 0);
-INSERT INTO public.details VALUES ('user_1730519912495', 0, 0);
-INSERT INTO public.details VALUES ('user_1730519912494', 0, 0);
-INSERT INTO public.details VALUES ('Gandhi', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521469582', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521469581', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521539743', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521539742', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521664282', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521664281', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521759940', 0, 0);
-INSERT INTO public.details VALUES ('user_1730521759939', 0, 0);
-INSERT INTO public.details VALUES ('Sakal', 0, 0);
-INSERT INTO public.details VALUES ('Saurav', 1, 8);
-INSERT INTO public.details VALUES ('user_1730522762930', 2, 708);
-INSERT INTO public.details VALUES ('user_1730522762931', 5, 112);
-INSERT INTO public.details VALUES ('user_1730522843717', 2, 713);
-INSERT INTO public.details VALUES ('user_1730522843718', 5, 252);
-INSERT INTO public.details VALUES ('Dhirender', 1, 11);
-INSERT INTO public.details VALUES ('user_1730522894350', 2, 854);
-INSERT INTO public.details VALUES ('user_1730522894351', 5, 57);
-INSERT INTO public.details VALUES ('user_1730522953974', 2, 62);
-INSERT INTO public.details VALUES ('user_1730522953975', 5, 18);
 
 
 --
--- Name: details details_username_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: games games_username_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
-ALTER TABLE ONLY public.details
-    ADD CONSTRAINT details_username_key UNIQUE (username);
+ALTER TABLE ONLY public.games
+    ADD CONSTRAINT games_username_key UNIQUE (username);
 
 
 --
 -- PostgreSQL database dump complete
 --
-
